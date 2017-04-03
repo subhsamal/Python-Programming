@@ -1,8 +1,9 @@
 import movie
+import fresh_tomatoes
 
 toy_story = movie.Movie("Toy Story-3",
                         "Story of a boy and his toy",
-                        "https://en.wikipedia.org/wiki/Toy_Story_3#/media/File:Toy_Story_3_poster.jpg",
+                        "http://t3.gstatic.com/images?q=tbn:ANd9GcRUAG6E1nL4GRxsB1G5upnKfQVgm8zeILqd_EbN-2kjMeZZPcah",
                         "https://www.youtube.com/watch?v=JcpWXaA2qeg")  #module/filename. classname
 
 #print (toy_story.storyline)
@@ -17,7 +18,24 @@ avatar = movie.Movie("Avatar-2",
 
 kong = movie.Movie("Kong - Skull Island",
                    "Kong - Skull Island - For the ride at Islands of Adventure",
-                   "https://en.wikipedia.org/wiki/Kong:_Skull_Island#/media/File:Kong_Skull_Island_poster.jpg",
+                   "http://t3.gstatic.com/images?q=tbn:ANd9GcS3OOr06uE3lEZwum5WxKkkdsC37ObLwjKZgSSx-V96yrt6DhKE",
                    "https://www.youtube.com/watch?v=2onxgmKT1fw")
 print (kong.storyline)
-kong.play_trailer()
+#kong.play_trailer()
+
+avengers = movie.Movie("Avengers -2",
+                       "Infinity War",
+                       "http://media.comicbook.com/2017/03/avengers-infinity-war-238299.jpg",
+                       "https://www.youtube.com/watch?v=Ptfk0TF9MF0")
+print (avengers.storyline)
+#avengers.play_trailer()
+
+deadpool = movie.Movie("Deadpool -2",
+                       "Deadpool -2",
+                       "http://img.cinemablend.com/cb/a/9/a/d/5/5/a9ad5581630dc20adc5413fcc4e9ca44e9b1bc063ffa97b7ca26ab870ded2552.jpg",
+                       "https://www.youtube.com/watch?v=Tpo9WYxLdLY")
+print (deadpool.storyline)
+#deadpool.play_trailer()
+
+movies_list = [toy_story, avatar, kong, avengers, deadpool]
+fresh_tomatoes.open_movies_page(movies_list)
